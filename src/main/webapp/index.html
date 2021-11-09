@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<h2>Menu</h2>
+<button id="btn_prod">Show Products</button>
+<button id="btn_stock">Show Stocks</button>
+<button id="btn_cust">Show Customers</button>
+
+<div id="product" style="display:none">
+    <h2>Product Maintenance</h2>
+    <div>
+        <label for="product_name" id="product_id" class="id"> </label>
+        <input type="text" id="product_name" size=15/>
+        <img src="/tick.png" alt="Save" id="productSave"/>
+        <img src="/plus.png" alt="Add" id="productAdd"/>
+        <img src="/minus.png" alt="Delete" id="productDelete"/>
+    </div>
+    <h3>Product Details</h3>
+    <dynamic-table id="products"></dynamic-table>
+</div>
+
+<div id="stock" style="display:none">
+    <h2>Stock Maintenance</h2>
+    <div>
+        <label for="stock_product_name" id="stock_id" class="id"> </label>
+        <input type="text" id="stock_product_name" size=15/>
+        <input type="text" id="stock_quantity" size=8/>
+        <input type="text" id="stock_price" size=8/>
+        <input type="text" id="stock_expiryDate" size=10/>
+        <img src="/tick.png" alt="Save"/>
+        <img src="/plus.png" alt="Add"/>
+        <img src="/minus.png" alt="Delete"/>
+    </div>
+    <h3>Stock Details</h3>
+    <dynamic-table id="stocks"></dynamic-table>
+</div>
+
+<div id="customer" style="display:none">
+    <h2>Customer Maintenance</h2>
+    <customer-list
+            name="Saro"
+            avatar="https://randomuser.me/api/portraits/men/1.jpg">
+        <div slot="phone">+65 9144 0436</div>
+        <div slot="email">sarawananm@icloud.com</div>
+    </customer-list>
+    <customer-list
+            name="Mammu"
+            avatar="https://randomuser.me/api/portraits/women/1.jpg">
+        <div slot="phone">+65 8118 9162</div>
+        <div slot="email">krithikasarawanan@yahoo.com</div>
+    </customer-list>
+</div>
+
+<script type="module" src="./web-components/dynamic-table.js"></script>
+<script type="module" src="./web-components/customer-list.js"></script>
+<script type="module" src="index.js"></script>
+</body>
+</html>

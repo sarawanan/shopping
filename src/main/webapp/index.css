@@ -1,0 +1,26 @@
+img {
+    width: 20px;
+    height=20px;
+    vertical-align: middle
+}
+.id, input, text {
+    font-family: Annai MN;
+    font-size: small;
+}
+h2 {
+    font-family: Annai MN;
+    font-size: large;
+}
+h3 {
+    font-family: Annai MN;
+    font-size: medium;
+}
+.details {
+    color: blue;
+    cursor: pointer;
+    font-family: Annai MN;
+    font-size: small;
+}
+.hide {
+    display: none;
+}
