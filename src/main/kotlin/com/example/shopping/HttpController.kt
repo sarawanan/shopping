@@ -1,14 +1,13 @@
 package com.example.shopping
 
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.data.repository.findByIdOrNull
 import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api")
 class HttpController @Autowired constructor(
     val productRepo: ProductRepo,
-    val stockRepo: StockRepo
+    val stockRepo: StockRepo,
 ) {
     @GetMapping("/product")
     fun getProduct(): List<ProductDTO> = productRepo.findAll().mapNotNull { it.toDto() }
